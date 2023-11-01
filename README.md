@@ -14,7 +14,7 @@ five= (overlay-xy(four, 150, 150, rectangle(180, 100, "solid", "red")))
 five
 
 
-
+(lagre som ar, visual studiocode)
 include shared-gdrive("dcic-2021", "1wyQZj_L0qqV9Ekgr9au6RX2iqt2Ga8Ep")
 include gdrive-sheets
 include data-source
@@ -31,6 +31,24 @@ fun energi-to-number(str :: String) -> Number:
     | none => 0
   end
 where:
+energi-to-number("") is 0
+  energi-to-number("48") is 48
+end
+  
+  transform-column(kWh-wealthy-consumer-data, "energi", energi-to-number)
+
+fun bil(): 
+  energy-per-day = ((50/10) * (10))
+  energy-per-day
+end
+
+bil()
+
+fun sum-energi():
+  t = transform-column(kWh-wealthy-consumer-data, "energi", energi-to-number)
+  sum(t, "energi")
+end
+sum-energi() + bil()
 energi-to-number("") is 0
 energi-to-number("48") is 48
 end
