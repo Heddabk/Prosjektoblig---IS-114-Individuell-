@@ -1,0 +1,212 @@
+OPPGAVE 1 - Flagg
+
+include image
+
+table_flagg = 
+  table: Land, bakgrunnsfarge, korsfarge
+    row: "Norge", "red", "blue,white"
+    row: "Sverige", "blue", "yellow,yellow"
+    row: "Finland", "white", "blue,blue"
+    row: "Danmark", "red", "white,white"
+    row: "Island", "blue", "red,white"
+    row: "Faeroyene", "white", "red,blue"
+    row: "Aaland", "blue", "red,yellow"
+  end
+
+fun tegn_flagg(Land):
+  if Land == "Norge":
+    block:
+      bakgrunnsfarge = table_flagg.row-n(0)["bakgrunnsfarge"]
+      #korsfarge = table_flagg.row-n(teller)["korsfarge"]
+      korsfarge = string-split(table_flagg.row-n(0)["korsfarge"], ",")
+      overlay(
+        rectangle(240, 160, "outline", "black"),
+        place-image(
+          rotate(90, rectangle(20, 320, "solid", korsfarge.first)),
+          90, 80,
+          place-image(
+            rectangle(20, 320, "solid", korsfarge.first),
+            70, 0,
+            place-image(
+              rotate(90, rectangle(40, 320, "solid", korsfarge.get(1))),
+              90, 80,
+              place-image(
+                rectangle(40, 320, "solid", korsfarge.get(1)),
+                70, 0,
+                rectangle(240, 160, "solid", bakgrunnsfarge))))))
+    end
+  else if Land == "Sverige":
+    block:
+      bakgrunnsfarge = table_flagg.row-n(1)["bakgrunnsfarge"]
+      #korsfarge = table_flagg.row-n(teller)["korsfarge"]
+      korsfarge = string-split(table_flagg.row-n(1)["korsfarge"], ",")
+      overlay(
+        rectangle(240, 160, "outline", "black"),
+        place-image(
+          rotate(90, rectangle(20, 320, "solid", korsfarge.first)),
+          90, 80,
+          place-image(
+            rectangle(20, 320, "solid", korsfarge.first),
+            70, 0,
+            place-image(
+              rotate(90, rectangle(40, 320, "solid", korsfarge.get(1))),
+              90, 80,
+              place-image(
+                rectangle(40, 320, "solid", korsfarge.get(1)),
+                70, 0,
+                rectangle(240, 160, "solid", bakgrunnsfarge))))))
+    end
+  else if Land == "Finland":
+    block:
+      bakgrunnsfarge = table_flagg.row-n(2)["bakgrunnsfarge"]
+      #korsfarge = table_flagg.row-n(teller)["korsfarge"]
+      korsfarge = string-split(table_flagg.row-n(2)["korsfarge"], ",")
+      overlay(
+        rectangle(240, 160, "outline", "black"),
+        place-image(
+          rotate(90, rectangle(20, 320, "solid", korsfarge.first)),
+          90, 80,
+          place-image(
+            rectangle(20, 320, "solid", korsfarge.first),
+            70, 0,
+            place-image(
+              rotate(90, rectangle(40, 320, "solid", korsfarge.get(1))),
+              90, 80,
+              place-image(
+                rectangle(40, 320, "solid", korsfarge.get(1)),
+                70, 0,
+                rectangle(240, 160, "solid", bakgrunnsfarge))))))
+    end
+  else if Land == "Danmark":
+    block:
+      bakgrunnsfarge = table_flagg.row-n(3)["bakgrunnsfarge"]
+      #korsfarge = table_flagg.row-n(teller)["korsfarge"]
+      korsfarge = string-split(table_flagg.row-n(3)["korsfarge"], ",")
+      overlay(
+        rectangle(240, 160, "outline", "black"),
+        place-image(
+          rotate(90, rectangle(20, 320, "solid", korsfarge.first)),
+          90, 80,
+          place-image(
+            rectangle(20, 320, "solid", korsfarge.first),
+            70, 0,
+            place-image(
+              rotate(90, rectangle(40, 320, "solid", korsfarge.get(1))),
+              90, 80,
+              place-image(
+                rectangle(40, 320, "solid", korsfarge.get(1)),
+                70, 0,
+                rectangle(240, 160, "solid", bakgrunnsfarge))))))
+    end
+  else if Land == "Island":
+    block:
+      bakgrunnsfarge = table_flagg.row-n(4)["bakgrunnsfarge"]
+      #korsfarge = table_flagg.row-n(teller)["korsfarge"]
+      korsfarge = string-split(table_flagg.row-n(4)["korsfarge"], ",")
+      overlay(
+        rectangle(240, 160, "outline", "black"),
+        place-image(
+          rotate(90, rectangle(20, 320, "solid", korsfarge.first)),
+          90, 80,
+          place-image(
+            rectangle(20, 320, "solid", korsfarge.first),
+            70, 0,
+            place-image(
+              rotate(90, rectangle(40, 320, "solid", korsfarge.get(1))),
+              90, 80,
+              place-image(
+                rectangle(40, 320, "solid", korsfarge.get(1)),
+                70, 0,
+                rectangle(240, 160, "solid", bakgrunnsfarge))))))
+    end
+    else if Land == "Faeroyene":
+    block:
+      bakgrunnsfarge = table_flagg.row-n(5)["bakgrunnsfarge"]
+      #korsfarge = table_flagg.row-n(teller)["korsfarge"]
+      korsfarge = string-split(table_flagg.row-n(5)["korsfarge"], ",")
+      overlay(
+        rectangle(240, 160, "outline", "black"),
+        place-image(
+          rotate(90, rectangle(20, 320, "solid", korsfarge.first)),
+          90, 80,
+          place-image(
+            rectangle(20, 320, "solid", korsfarge.first),
+            70, 0,
+            place-image(
+              rotate(90, rectangle(40, 320, "solid", korsfarge.get(1))),
+              90, 80,
+              place-image(
+                rectangle(40, 320, "solid", korsfarge.get(1)),
+                70, 0,
+                rectangle(240, 160, "solid", bakgrunnsfarge))))))
+    end
+  else:
+    "feil"
+  end
+end
+
+tegn_flagg("Norge")
+tegn_flagg("Finland")
+tegn_flagg("Danmark")
+tegn_flagg("Sverige")
+tegn_flagg("Faeroyene")
+
+OPPGAVE 2
+
+include shared-gdrive("dcic-2021", "1wyQZj_L0qqV9Ekgr9au6RX2iqt2Ga8Ep")
+include gdrive-sheets
+include data-source
+ssid = "1RYN0i4Zx_UETVuYacgaGfnFcv4l9zd9toQTTdkQkj7g"
+kWh-wealthy-consumer-data =
+  load-table: komponent, energi
+    source: load-spreadsheet(ssid).sheet-by-name("kWh", true)
+    sanitize energi using string-sanitizer
+end
+
+fun energi-to-number(str :: String) -> Number:
+  doc: "If s is not a numeric string, default to 0."
+  cases(Option) string-to-number(str):
+    | some(a) => a
+    | none => 0
+  end
+where:
+energi-to-number("") is 0
+energi-to-number("48") is 48
+energi-to-number("30") is 30
+energi-to-number("37") is 37
+energi-to-number("5") is 5
+energi-to-number("4") is 4
+energi-to-number("15") is 15
+energi-to-number("12") is 12  
+end
+  
+kWh-wealthy-consumer-data
+
+ny-tabell = transform-column(kWh-wealthy-consumer-data, "energi", energi-to-number)
+ny-tabell
+
+fun bil(): 
+  energy-per-day = ((50/10) * (10))
+  energy-per-day
+end
+
+bil()
+
+fun add-bil(value :: Number) -> Number:
+  if value == 0:
+    bil()
+  else:
+    value
+  end
+end
+
+#Får ikke til å legge bil inn i tabellen
+
+fun sum-energi():
+  t = transform-column(kWh-wealthy-consumer-data, "energi", energi-to-number)
+  sum(t, "energi")
+end
+sum-energi() + bil()
+
+
+bar-chart(ny-tabell, "komponent", "energi")
